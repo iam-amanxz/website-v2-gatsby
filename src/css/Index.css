@@ -1,0 +1,33 @@
+/* Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+
+body {
+  @apply bg-bg;
+  @apply font-normal;
+  @apply font-sans;
+  @apply text-primary;
+}
+
+.section__title {
+  @apply text-3xl;
+  @apply font-medium;
+  @apply font-serif;
+}
+
+@screen md {
+  .section__title {
+    @apply text-4xl;
+  }
+}
+
+@screen md {
+  .section__title {
+    @apply text-5xl;
+  }
+}
+
+.container {
+  @apply max-w-contentMax;
+  @apply mx-auto;
+  width: 90%;
+}

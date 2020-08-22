@@ -1,0 +1,19 @@
+.skills__card {
+  @apply bg-secondary p-8 shadow-lg;
+}
+
+.card--icon {
+  @apply mb-3 mx-auto;
+}
+
+.card--title {
+  @apply font-bold text-xl mb-3;
+}
+
+.skills__additional--skill {
+  @apply flex items-center justify-center mb-5;
+}
+
+.additional--skill--text {
+  @apply text-lg font-semibold ml-5;
+}
