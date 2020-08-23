@@ -36,7 +36,7 @@ const Footer = () => {
     <footer className="footer text-center text-bg lg:rounded-tl-full bg-primary py-8">
       <p className="footer__logo font-serif text-2xl mb-8">
         <a href="#">
-          husnul<span className="font-bold">aman.</span>
+          husnul<span className="font-extrabold">aman.</span>
         </a>
       </p>
       <div className="social__links mb-8 flex justify-center">

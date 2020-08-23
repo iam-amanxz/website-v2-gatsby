@@ -37,7 +37,7 @@ const Header = () => {
         className="hero max-w-contentMax mx-auto flex flex-col justify-end pb-32 md:pb-0 md:justify-center"
       >
         {/* Greeting */}
-        <div className="hero__greeting font-serif font-bold mb-5">
+        <div className="hero__greeting font-serif font-extrabold mb-5">
           <h1 className="text-2xl md:text-3xl lg:text-4xl">Hi there,</h1>
           <h1 className="text-3xl md:text-4xl lg:text-6xl">
             My name is Husnul Aman
@@ -45,7 +45,7 @@ const Header = () => {
         </div>
 
         {/* Pargraph */}
-        <p className="hero__leading font-serif font-light text-xl md:text-2xl lg:text-3xl md:w-2/5 mb-8">
+        <p className="hero__leading font-serif text-xl md:text-2xl lg:text-3xl md:w-2/5 mb-8">
           And I choose to solve problems with programming
         </p>
 

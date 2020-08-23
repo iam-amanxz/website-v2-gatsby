@@ -18,7 +18,7 @@ const Navbar = () => {
       {/** Nav Logo */}
       <p className="nav__logo  text-2xl">
         <a href="#hero">
-          husnul<span className="font-bold">aman.</span>
+          husnul<span className="font-extrabold">aman.</span>
         </a>
       </p>
       {/** Nav Toggle */}

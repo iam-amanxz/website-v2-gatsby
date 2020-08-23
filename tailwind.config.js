@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Canela", ...defaultTheme.fontFamily.serif],
+        serif: ["Butler", ...defaultTheme.fontFamily.serif],
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       },
       colors: {
