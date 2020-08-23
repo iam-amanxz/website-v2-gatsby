@@ -12,6 +12,17 @@
   @apply font-bold text-xl mb-3;
 }
 
+.skills__additional {
+  width: 90%;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
 .skills__additional--skill {
   @apply flex items-center justify-center mb-5;
 }
