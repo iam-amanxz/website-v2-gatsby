@@ -6,7 +6,7 @@
 .header__decoration {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 70px;
   z-index: -10;
 }
 
@@ -17,7 +17,66 @@
 /* Nav */
 .nav {
   height: 70px;
+  /* background-color: blueviolet; */
+  left: 0;
+  right: 0;
+  position: fixed;
+  @apply shadow-sm;
+  @apply bg-bg;
+  z-index: 100;
+}
+
+.nav__container {
+  @apply max-w-contentMax mx-auto flex items-center justify-between font-serif;
   width: 90%;
+  height: 100%;
+}
+
+.toggle--close {
+  z-index: 120;
+}
+
+.nav__list {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply text-bg;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav__list--item {
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.nav__list--item:not(:last-child) {
+  @apply mb-16;
+}
+
+@screen md {
+  .nav__list {
+    display: flex !important;
+    @apply ml-auto;
+    @apply flex-row;
+    background-color: transparent;
+    position: static;
+    @apply text-primary;
+  }
+  .nav__list--item {
+    @apply text-base;
+    @apply font-normal;
+  }
+  .nav__list--item:not(:last-child) {
+    @apply mb-0;
+  }
 }
 
 .nav__list--item:hover {
@@ -30,6 +89,7 @@
 
 /* Hero */
 .hero {
+  padding-top: 70px;
   height: calc(100vh - 70px);
   width: 90%;
 }
@@ -53,4 +113,12 @@
   @apply border;
   @apply border-solid;
   @apply border-accent;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
