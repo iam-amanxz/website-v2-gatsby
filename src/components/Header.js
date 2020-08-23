@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import AOS from "aos"
@@ -25,7 +25,9 @@ const Header = () => {
 
   let resumeUrl = data.allSanityProfile.edges[0].node.resumeUrl
 
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <header id="#" className="header">

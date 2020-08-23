@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import AOS from "aos"
@@ -35,7 +35,9 @@ const Footer = () => {
 
   let links = data.allSanityProfile.edges[0].node
 
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <footer className="footer text-center text-bg lg:rounded-tl-full bg-primary py-8">

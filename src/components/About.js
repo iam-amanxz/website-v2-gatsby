@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Image from "gatsby-image"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -31,7 +31,9 @@ const About = () => {
     image = node.profileImage.asset.fluid
   })
 
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <section id="about" className=" bg-secondary">

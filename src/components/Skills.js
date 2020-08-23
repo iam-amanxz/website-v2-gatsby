@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -11,7 +11,9 @@ import Icon3 from "../images/skills-3.svg"
 import IconCheck from "../images/skills-check.svg"
 
 const Skills = () => {
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <section id="skills">

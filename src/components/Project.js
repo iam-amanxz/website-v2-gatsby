@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Image from "gatsby-image"
 
 import AOS from "aos"
@@ -9,7 +9,9 @@ import { FaGithub, FaCloud } from "react-icons/fa"
 import "../css/Project.css"
 
 const Project = ({ project }) => {
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <div data-aos="fade-up" className="project">

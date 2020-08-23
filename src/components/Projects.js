@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import AOS from "aos"
@@ -35,7 +35,9 @@ const Projects = () => {
     }
   `)
 
-  AOS.init()
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <section id="projects">
