@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import jump from "jump.js"
 
 import { FaBars } from "react-icons/fa"
 import { RiCloseLine } from "react-icons/ri"
@@ -31,6 +32,9 @@ const Navbar = () => {
     el.classList.add("active")
     navList.style.display = "none"
     setMenuOpen(false)
+    jump(el.getAttribute("href"), {
+      duration: 1000,
+    })
   }
 
   return (
@@ -59,7 +63,7 @@ const Navbar = () => {
 
         <ul className="nav__list">
           <li className="nav__list--item" onClick={handleClick}>
-            <a href="#" className="nav__link">
+            <a href="#hero" className="nav__link">
               Home
             </a>
           </li>

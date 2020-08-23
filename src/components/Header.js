@@ -1,6 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 import "../css/Header.css"
 
 import Navbar from "../components/Navbar"
@@ -22,8 +25,10 @@ const Header = () => {
 
   let resumeUrl = data.allSanityProfile.edges[0].node.resumeUrl
 
+  AOS.init()
+
   return (
-    <header className="header">
+    <header id="#" className="header">
       <div className="header__decoration">
         <img
           src={HeaderDecoration}
@@ -38,17 +43,24 @@ const Header = () => {
       >
         {/* Greeting */}
         <div className="hero__greeting font-serif font-extrabold mb-5">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl">Hi there,</h1>
-          <h1 className="text-4xl lg:text-6xl">My name is Husnul Aman</h1>
+          <h1 data-aos="fade-down" className="text-2xl md:text-3xl lg:text-4xl">
+            Hi there,
+          </h1>
+          <h1 data-aos="fade-down" className="text-5xl lg:text-6xl">
+            My name is Husnul Aman
+          </h1>
         </div>
 
         {/* Pargraph */}
-        <p className="hero__leading font-serif text-xl md:text-2xl lg:text-3xl md:w-2/5 mb-8">
+        <p
+          data-aos="fade-down"
+          className="hero__leading font-serif text-xl md:text-2xl lg:text-3xl md:w-2/5 mb-8"
+        >
           And I choose to solve problems with programming
         </p>
 
         {/* Buttons */}
-        <div className="hero__buttons">
+        <div data-aos="fade-down" className="hero__buttons">
           <button className="btn hero__buttons--primary text-bg bg-accent">
             <a href={resumeUrl} target="_blank" rel="noreferrer">
               Resume

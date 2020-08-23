@@ -1,5 +1,7 @@
 import React from "react"
 import Image from "gatsby-image"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import "../css/About.css"
 
@@ -29,13 +31,20 @@ const About = () => {
     image = node.profileImage.asset.fluid
   })
 
+  AOS.init()
+
   return (
     <section id="about" className=" bg-secondary">
       <div className="container py-24 md:flex">
         {/* Left - Image */}
-        <Image className="about__pic" fluid={image} alt="myself" />
+        <Image
+          data-aos="fade-up"
+          className="about__pic"
+          fluid={image}
+          alt="myself"
+        />
         {/* Right - Text */}
-        <div className="about__text">
+        <div data-aos="fade-up" className="about__text">
           <h2 className="section__title mb-8 text-center md:text-left">
             What’s my story?
           </h2>
