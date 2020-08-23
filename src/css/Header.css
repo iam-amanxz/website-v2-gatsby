@@ -6,8 +6,7 @@
 .header__decoration {
   position: absolute;
   right: 0;
-  top: 70px;
-  z-index: -10;
+  top: 0;
 }
 
 .header__decoration > img {
@@ -17,23 +16,29 @@
 /* Nav */
 .nav {
   height: 70px;
-  /* background-color: blueviolet; */
   left: 0;
   right: 0;
   position: fixed;
-  @apply shadow-sm;
-  @apply bg-bg;
   z-index: 100;
+  @apply shadow-sm;
 }
 
 .nav__container {
-  @apply max-w-contentMax mx-auto flex items-center justify-between font-serif;
   width: 90%;
   height: 100%;
+  @apply max-w-contentMax;
+  @apply mx-auto;
+  @apply items-center;
+  @apply flex;
+  @apply justify-between;
+  @apply font-serif;
 }
 
+.toggle--bar {
+  z-index: 130;
+}
 .toggle--close {
-  z-index: 120;
+  z-index: 130;
 }
 
 .nav__list {
@@ -43,13 +48,12 @@
   top: 0;
   right: 0;
   bottom: 0;
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @apply text-bg;
   display: none;
   transition: all 0.2s ease-in-out;
+  @apply text-bg;
 }
 
 .nav__list--item {
@@ -64,10 +68,10 @@
 @screen md {
   .nav__list {
     display: flex !important;
-    @apply ml-auto;
-    @apply flex-row;
     background-color: transparent;
     position: static;
+    @apply ml-auto;
+    @apply flex-row;
     @apply text-primary;
   }
   .nav__list--item {
@@ -95,10 +99,10 @@
 }
 
 .btn {
+  transition: all 0.2s ease-in;
   @apply py-3;
   @apply px-8;
   @apply shadow-lg;
-  transition: all 0.2s ease-in;
 }
 
 .btn:hover {

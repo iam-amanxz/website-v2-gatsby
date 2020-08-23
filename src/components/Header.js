@@ -39,9 +39,7 @@ const Header = () => {
         {/* Greeting */}
         <div className="hero__greeting font-serif font-extrabold mb-5">
           <h1 className="text-2xl md:text-3xl lg:text-4xl">Hi there,</h1>
-          <h1 className="text-3xl md:text-4xl lg:text-6xl">
-            My name is Husnul Aman
-          </h1>
+          <h1 className="text-4xl lg:text-6xl">My name is Husnul Aman</h1>
         </div>
 
         {/* Pargraph */}
