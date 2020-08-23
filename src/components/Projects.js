@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { BsArrowRight } from "react-icons/bs"
+
 import Project from "../components/Project"
 
 const Projects = () => {
@@ -41,15 +43,18 @@ const Projects = () => {
             <Project key={project.slug.current} project={project} />
           ))}
         </div>
-        <button className="project__btn btn">
-          <a
-            href="https://github.com/iam-amanxz/projects"
-            target="_blank"
-            rel="noreferrer"
-          >
-            See More Projects
-          </a>
-        </button>
+        <div className="projects__more flex justify-center">
+          <button className="project__btn font-semibold flex items-center">
+            <a
+              href="https://github.com/iam-amanxz/projects"
+              target="_blank"
+              rel="noreferrer"
+            >
+              See More Projects
+            </a>
+            <BsArrowRight className="text-3xl ml-3" />
+          </button>
+        </div>
       </div>
     </section>
   )

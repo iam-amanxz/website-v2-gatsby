@@ -1,3 +1,19 @@
 .about__pic {
-  min-height: 350px;
+  margin: 0 auto;
+  @apply mb-8;
+  width: 80%;
+  max-width: 453px;
+  max-height: 600px;
+  @apply shadow-lg;
+}
+
+@screen md {
+  .about__pic {
+    @apply mb-0;
+    width: 45%;
+    margin: auto;
+  }
+  .about__text {
+    width: 45%;
+  }
 }

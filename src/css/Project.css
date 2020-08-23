@@ -39,9 +39,13 @@
 }
 
 .project__btn {
-  @apply border;
-  @apply border-solid;
-  @apply border-accent;
+  @apply py-3;
+  @apply px-8;
+  transition: all 0.2s ease-in;
+}
+
+.project__btn:hover {
+  @apply shadow-xl;
 }
 
 .project__icon__wrapper {

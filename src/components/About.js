@@ -13,8 +13,8 @@ const About = () => {
           node {
             profileImage {
               asset {
-                fluid {
-                  srcSet
+                fluid(maxHeight: 600, maxWidth: 453) {
+                  ...GatsbySanityImageFluid
                 }
               }
             }
@@ -31,13 +31,11 @@ const About = () => {
 
   return (
     <section id="about" className=" bg-secondary">
-      <div className="container md:flex py-24">
+      <div className="container py-24 md:flex">
         {/* Left - Image */}
-        <div className="about__image md:w-1/2 p-10 md:p-20">
-          <Image className="about__pic md:h-full" fluid={image} alt="myself" />
-        </div>
+        <Image className="about__pic" fluid={image} alt="myself" />
         {/* Right - Text */}
-        <div className="about__text md:w-1/2">
+        <div className="about__text">
           <h2 className="section__title mb-8 text-center md:text-left">
             What’s my story?
           </h2>
@@ -79,3 +77,7 @@ const About = () => {
 }
 
 export default About
+
+// <div className="about__image md:w-1/2">
+// <Image className="about__pic" fluid={image} alt="myself" />
+// </div>

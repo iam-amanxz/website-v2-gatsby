@@ -20,7 +20,7 @@ body {
   }
 }
 
-@screen md {
+@screen lg {
   .section__title {
     @apply text-5xl;
   }
