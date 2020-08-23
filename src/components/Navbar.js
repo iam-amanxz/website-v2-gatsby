@@ -16,6 +16,7 @@ const Navbar = () => {
         break
       case false:
         navList.style.display = "none"
+        break
       default:
         break
     }
