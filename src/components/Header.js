@@ -58,7 +58,7 @@ const Header = () => {
           data-aos="fade-down"
           className="hero__leading font-serif text-xl md:text-2xl lg:text-3xl md:w-2/5 mb-8"
         >
-          And I choose to solve problems with programming
+          And I chose to solve problems with programming
         </p>
 
         {/* Buttons */}

@@ -1,9 +1,6 @@
 import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import AOS from "aos"
-import "aos/dist/aos.css"
-
 import "../css/Footer.css"
 
 import {
@@ -35,21 +32,14 @@ const Footer = () => {
 
   let links = data.allSanityProfile.edges[0].node
 
-  useEffect(() => {
-    AOS.init()
-  }, [])
-
   return (
     <footer className="footer text-center text-bg lg:rounded-tl-full bg-primary py-8">
-      <p data-aos="fade-up" className="footer__logo font-serif text-2xl mb-8">
+      <p className="footer__logo font-serif text-2xl mb-8">
         <a href="#">
           husnul<span className="font-extrabold">aman.</span>
         </a>
       </p>
-      <div
-        data-aos="fade-up"
-        className="social__links mb-8 flex justify-center"
-      >
+      <div className="social__links mb-8 flex justify-center">
         {/** LinkedIn */}
         <div className="footer__link mr-5">
           <div className="icon__wrapper bg-bg">

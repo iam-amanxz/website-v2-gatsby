@@ -18,7 +18,7 @@ const IndexPage = () => (
   <div>
     <SEO title="Home" />
     <Header />
-    <main className="md:text-lg">
+    <main className="">
       <About />
       <Skills />
       <Projects />
