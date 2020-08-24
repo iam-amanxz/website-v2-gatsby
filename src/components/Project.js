@@ -52,13 +52,15 @@ const Project = ({ project }) => {
           </div>
 
           {/** Live Preview */}
-          <div className="project__link">
-            <div className="project__icon__wrapper bg-accent rounded-full inline-block p-3">
-              <a href={project.hostedLink} target="_blank" rel="noreferrer">
-                <FaCloud className="project__icon text-bg " />
-              </a>
+          {project.hostedLink && (
+            <div className="project__link">
+              <div className="project__icon__wrapper bg-accent rounded-full inline-block p-3">
+                <a href={project.hostedLink} target="_blank" rel="noreferrer">
+                  <FaCloud className="project__icon text-bg " />
+                </a>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
