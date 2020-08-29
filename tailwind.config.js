@@ -5,8 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Butler", ...defaultTheme.fontFamily.serif],
-        sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
+        // serif: ["Butler", ...defaultTheme.fontFamily.serif],
+        // sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
+        primary: ["Barlow", ...defaultTheme.fontFamily.sans],
+        secondary: ["Space Mono", ...defaultTheme.fontFamily.mono],
+        tertiary: ["Barlow Semi Condensed", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         bg: "#fbfbfb",

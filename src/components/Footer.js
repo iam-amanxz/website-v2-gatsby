@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "../css/Footer.css"
@@ -34,9 +34,9 @@ const Footer = () => {
 
   return (
     <footer className="footer text-center text-bg lg:rounded-tl-full bg-primary py-8">
-      <p className="footer__logo font-serif text-2xl mb-8">
+      <p className="footer__logo font-tertiary text-xl mb-8">
         <a href="#">
-          husnul<span className="font-extrabold">aman.</span>
+          husnul<span className="font-bold">aman.</span>
         </a>
       </p>
       <div className="social__links mb-8 flex justify-center">

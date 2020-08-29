@@ -25,7 +25,7 @@ const Project = ({ project }) => {
       {/** Details */}
       <div className="project__card md:text-left bg-secondary p-10 px-20">
         {/** Title */}
-        <h3 className="project--title font-serif text-xl mb-4">
+        <h3 className="project--title font-tertiary text-xl mb-4">
           {project.title}
         </h3>
         {/** Description */}

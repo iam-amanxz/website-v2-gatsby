@@ -42,9 +42,9 @@ const Navbar = () => {
     <nav className="nav">
       {/** Nav Logo */}
       <div className="nav__container">
-        <p className="nav__logo  text-2xl">
+        <p className="nav__logo text-xl">
           <a href="#hero">
-            husnul<span className="font-extrabold">aman.</span>
+            husnul<span className="font-bold">aman.</span>
           </a>
         </p>
         {/** Nav Toggle */}
