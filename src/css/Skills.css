@@ -1,15 +1,20 @@
 .skills__card {
   width: 80%;
   margin: 0 auto;
-  @apply bg-secondary p-8 shadow-lg;
+  @apply bg-secondary;
+  @apply p-8;
+  @apply shadow-lg;
 }
 
 .card--icon {
-  @apply mb-3 mx-auto;
+  @apply mb-3;
+  @apply mx-auto;
 }
 
 .card--title {
-  @apply font-bold text-xl mb-3;
+  @apply font-bold;
+  @apply text-xl;
+  @apply mb-3;
 }
 
 .skills__additional {
@@ -24,11 +29,15 @@
 }
 
 .skills__additional--skill {
-  @apply flex items-center justify-center mb-5;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply mb-5;
 }
 
 .additional--skill--text {
-  @apply font-semibold ml-5;
+  @apply font-semibold;
+  @apply ml-5;
 }
 
 @screen md {

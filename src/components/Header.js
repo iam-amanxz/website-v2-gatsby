@@ -44,11 +44,17 @@ const Header = () => {
         className="hero max-w-contentMax mx-auto flex flex-col justify-end pb-32 md:pb-0 md:justify-center"
       >
         {/* Greeting */}
-        <div className="hero__greeting font-primary font-bold mb-5">
-          <h1 data-aos="fade-down" className="text-2xl md:text-3xl lg:text-4xl">
+        <div className="hero__greeting font-tertiary mb-5">
+          <h1
+            data-aos="fade-down"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold"
+          >
             Hi there,
           </h1>
-          <h1 data-aos="fade-down" className="text-5xl lg:text-6xl">
+          <h1
+            data-aos="fade-down"
+            className="text-5xl lg:text-6xl font-extrabold"
+          >
             My name is Husnul Aman
           </h1>
         </div>

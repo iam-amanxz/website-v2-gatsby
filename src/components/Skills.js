@@ -60,7 +60,7 @@ const Skills = () => {
 
         <h3
           data-aos="fade-up"
-          className="section__subtitle font-tertiary text-2xl lg:text-3xl mb-8"
+          className="section__subtitle font-tertiary font-light text-2xl lg:text-3xl mb-8"
         >
           I can also
         </h3>
