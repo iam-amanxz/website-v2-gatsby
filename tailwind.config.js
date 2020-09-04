@@ -1,21 +1,18 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./src/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
-        // serif: ["Butler", ...defaultTheme.fontFamily.serif],
-        // sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
-        primary: ["Barlow", ...defaultTheme.fontFamily.sans],
+        primary: ["Barlow Condensed", ...defaultTheme.fontFamily.sans],
         secondary: ["Space Mono", ...defaultTheme.fontFamily.mono],
-        tertiary: ["Barlow Semi Condensed", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        bg: "#fbfbfb",
-        primary: "#2f3547",
-        secondary: "#fff0e5",
-        accent: "#ff9982",
+        bg: "#0F0F0F",
+        primary: "#F94024",
+        secondary: "#C0C514",
+        body: "#CBCBCB",
       },
       maxWidth: (theme, { breakpoints }) => ({
         contentMax: "68.75rem",
@@ -25,4 +22,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-}
+};
