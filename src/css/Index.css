@@ -57,7 +57,7 @@ body {
 .skills,
 .projects,
 .contact {
-  @apply py-32;
+  @apply py-16;
 }
 
 @screen md {

@@ -1,13 +1,24 @@
-.icon__wrapper {
-  display: inline-block;
-  @apply p-3;
-  @apply rounded-full;
-  @apply shadow-lg;
-  transition: all 0.2s ease-in;
+.footer__link {
+  @apply mr-5;
+  transition: all 0.2s ease-out;
 }
 
-.icon__wrapper:hover {
+.footer__link:last-child {
+  @apply mr-0;
+}
+
+@screen md {
+  .footer__link {
+    @apply mr-8;
+  }
+}
+
+@screen lg {
+  .footer__link {
+    @apply mr-10;
+  }
+}
+
+.footer__link:hover {
   transform: rotate(10deg);
-  @apply shadow-2xl;
-  @apply bg-primary;
 }

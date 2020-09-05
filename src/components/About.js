@@ -1,39 +1,13 @@
 import React from "react";
-// import Image from "gatsby-image";
 
 import "../css/About.css";
 
-// import { useStaticQuery, graphql } from "gatsby";
-
 const About = () => {
-  // const data = useStaticQuery(graphql`
-  //   query ProfilePicQuery {
-  //     allSanityProfile {
-  //       edges {
-  //         node {
-  //           profileImage {
-  //             asset {
-  //               fluid(maxHeight: 600, maxWidth: 453) {
-  //                 ...GatsbySanityImageFluid
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
-  // let image = null;
-  // data.allSanityProfile.edges.map(({ node }) => {
-  //   image = node.profileImage.asset.fluid;
-  // });
-
   return (
     <section id="about" className="about">
       <div className="container">
         <h2 className="section--title">About Me</h2>
-        <p className="about__description max-w-3xl mx-auto">
+        <p className="about__description max-w-3xl mx-auto ">
           I am Aman. Originally from Chilaw and currently based in Colombo, Sri
           Lanka. I am a Software Engineer and a music freak. I’ve always been a
           tech lover. I got my first computer when I was 14. I used computers

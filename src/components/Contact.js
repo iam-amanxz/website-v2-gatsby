@@ -35,13 +35,13 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container text-center">
         <h2 className="section--title">Get in touch</h2>
-        <p className="contact__description mb-10">
+        <p className="contact__description mb-10 max-w-4xl mx-auto">
           I'm currently looking for new opportunities, and my inbox is always
           open. Whether you have a question or just want to say hi, shoot an
           email to <strong>iam.amanxz@gmail.com</strong>. I'll try my best to
           get back to you!
         </p>
-        <button className="btn btn--primary bg-primary text-lg mb-10">
+        <button className="btn btn--primary text-base md:text-lg leading-none mb-10">
           <a
             href="mailto:iam.amanxz@gmail.com"
             target="_blank"
@@ -50,57 +50,45 @@ const Contact = () => {
             Say Hello!
           </a>
         </button>
-        <h3 className="section__subtitle font-primary font-medium text-secondary text-2xl lg:text-3xl text-center mb-6">
+        <h3 className="section__subtitle font-primary font-medium text-secondary text-2xl lg:text-3xl text-center mb-10">
           Find me on
         </h3>
-        <div className="social__links flex justify-center">
+        <div className="social__links flex justify-center text-xl md:text-3xl ">
           {/** LinkedIn */}
-          <div className="footer__link mr-5">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.linkedinUrl} target="_blank" rel="noreferrer">
-                <FaLinkedinIn className="icon text-bg" />
-              </a>
-            </div>
+          <div className="footer__link">
+            <a href={links.linkedinUrl} target="_blank" rel="noreferrer">
+              <FaLinkedinIn className="icon text-gray-200" />
+            </a>
           </div>
           {/** Dribbble */}
-          <div className="footer__link  mr-5">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.dribbbleUrl} target="_blank" rel="noreferrer">
-                <FaDribbble className="icon text-bg" />
-              </a>
-            </div>
+          <div className="footer__link">
+            <a href={links.dribbbleUrl} target="_blank" rel="noreferrer">
+              <FaDribbble className="icon text-gray-200" />
+            </a>
           </div>
           {/** Twitter */}
-          <div className="footer__link  mr-5">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.twitterUrl} target="_blank" rel="noreferrer">
-                <FaTwitter className="icon text-bg" />
-              </a>
-            </div>
+          <div className="footer__link">
+            <a href={links.twitterUrl} target="_blank" rel="noreferrer">
+              <FaTwitter className="icon text-gray-200" />
+            </a>
           </div>
           {/** Instagram */}
-          <div className="footer__link mr-5">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.instagramUrl} target="_blank" rel="noreferrer">
-                <FaInstagram className="icon text-bg" />
-              </a>
-            </div>
+          <div className="footer__link">
+            <a href={links.instagramUrl} target="_blank" rel="noreferrer">
+              <FaInstagram className="icon text-gray-200" />
+            </a>
           </div>
           {/** Github */}
-          <div className="footer__link mr-5">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.githubUrl} target="_blank" rel="noreferrer">
-                <FaGithub className="icon text-bg" />
-              </a>
-            </div>
+          <div className="footer__link">
+            <a href={links.githubUrl} target="_blank" rel="noreferrer">
+              <FaGithub className="icon text-gray-200" />
+            </a>
           </div>
           {/** Codepen */}
           <div className="footer__link">
-            <div className="icon__wrapper bg-gray-200">
-              <a href={links.codepenUrl} target="_blank" rel="noreferrer">
-                <FaCodepen className="icon text-bg" />
-              </a>
-            </div>
+            <a href={links.codepenUrl} target="_blank" rel="noreferrer">
+              <FaCodepen className="icon text-gray-200" />
+            </a>
           </div>
         </div>
       </div>
