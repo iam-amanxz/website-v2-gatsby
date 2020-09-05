@@ -12,7 +12,7 @@ const Skills = () => {
     <section id="skills" className="skills">
       <div className="container">
         <h2 className="section--title">Some things I can do</h2>
-        <p className="skills__description text-center mb-6">
+        <p className="skills__description text-center mb-6 max-w-4xl">
           I am one of those hard to find guys whose right and left parts of the
           brain function equally well, meaning I am both creative and analytical
           (Thanos would be impressed). I can do a lot of things. Since we are

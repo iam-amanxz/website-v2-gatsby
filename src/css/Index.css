@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -57,5 +57,17 @@ body {
 .skills,
 .projects,
 .contact {
-  @apply py-16;
+  @apply py-32;
+}
+
+@screen md {
+  .section--title {
+    @apply text-3xl;
+  }
+}
+
+@screen lg {
+  .section--title {
+    @apply text-4xl;
+  }
 }

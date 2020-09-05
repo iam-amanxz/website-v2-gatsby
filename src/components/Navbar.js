@@ -10,7 +10,7 @@ const Navbar = () => {
             husnul<span className="font-semibold">aman</span>
           </h2>
         </div>
-        <FaBars className="nav__toggle md:text-2xl" />
+        <FaBars className="nav__toggle text-xl md:text-2xl" />
       </div>
     </nav>
   );
