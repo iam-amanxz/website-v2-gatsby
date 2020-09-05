@@ -12,7 +12,6 @@ const Navbar = () => {
 
     switch (menuOpen) {
       case true:
-        navList.style.display = "flex";
         navList.style.top = "70px";
         break;
       case false:
@@ -23,11 +22,17 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
-  const handleClick = e => {
-    const el = e.target;
-    jump(el.getAttribute("href"), {
+  const goHome = () => {
+    jump("#header", {
       duration: 1000,
     });
+  };
+  const handleClick = e => {
+    const el = e.target;
+    jump(`#${el.getAttribute("value")}`, {
+      duration: 1000,
+    });
+
     setMenuOpen(false);
   };
 
@@ -35,7 +40,7 @@ const Navbar = () => {
     <nav className="nav">
       <div className="container flex justify-between items-center">
         <div className="nav__brand text-lg md:text-xl">
-          <h2 className="font-light">
+          <h2 className="font-light" onClick={goHome}>
             husnul<span className="font-semibold">aman</span>
           </h2>
         </div>
@@ -52,31 +57,31 @@ const Navbar = () => {
         )}
       </div>
       <ul className="nav__list text-lg font-bold">
-        <li className="nav__list--item" onClick={handleClick}>
-          <a href="#header" className="nav__link">
+        <li className="nav__list--item">
+          <a value="header" className="nav__link" onClick={handleClick}>
             Home
           </a>
         </li>
-        <li className="nav__list--item" onClick={handleClick}>
-          <a href="#about" className="nav__link">
+        <li className="nav__list--item">
+          <a value="about" className="nav__link" onClick={handleClick}>
             About
           </a>
         </li>
 
-        <li className="nav__list--item" onClick={handleClick}>
-          <a href="#skills" className="nav__link">
+        <li className="nav__list--item">
+          <a value="skills" className="nav__link" onClick={handleClick}>
             Skills
           </a>
         </li>
 
-        <li className="nav__list--item" onClick={handleClick}>
-          <a href="#projects" className="nav__link">
+        <li className="nav__list--item">
+          <a value="projects" className="nav__link" onClick={handleClick}>
             Projects
           </a>
         </li>
 
-        <li className="nav__list--item" onClick={handleClick}>
-          <a href="#contact" className="nav__link">
+        <li className="nav__list--item">
+          <a value="contact" className="nav__link" onClick={handleClick}>
             Contact
           </a>
         </li>
