@@ -1,5 +1,6 @@
 import React from "react";
-// import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 import HeroPng from "../images/hero.png";
 import { BiChevronDown } from "react-icons/bi";
@@ -11,6 +12,24 @@ import "../css/Header.css";
 // import Navbar from "../components/Navbar";
 
 const Header = () => {
+  const query = useStaticQuery(graphql`
+    query HeroPicQuery {
+      allSanityProfile {
+        edges {
+          node {
+            heroImage {
+              asset {
+                fluid {
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
   // const data = useStaticQuery(graphql`
   //   query ResumeUrlQuery {
   //     allSanityProfile {
@@ -23,6 +42,11 @@ const Header = () => {
   //   }
   // `);
 
+  let image = null;
+  query.allSanityProfile.edges.map(({ node }) => {
+    image = node.heroImage.asset.fluid;
+  });
+
   // let resumeUrl = data.allSanityProfile.edges[0].node.resumeUrl;
 
   return (
@@ -31,7 +55,7 @@ const Header = () => {
         <div className="container md:grid gap-12 grid-cols-2">
           {/* Bg Image */}
           <div className="hero__image self-center text-right">
-            <img src={HeroPng} alt="hero" />
+            <Image fluid={image} alt="hero" />
           </div>
           {/* Hero Texts */}
           <div className="hero__content self-center">
