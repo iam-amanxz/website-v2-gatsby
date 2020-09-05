@@ -1,0 +1,47 @@
+.skills__card {
+  width: 80%;
+  @apply mx-auto;
+  @apply bg-gray-900;
+  @apply p-8;
+  @apply shadow-lg;
+  @apply rounded-lg;
+}
+
+.card--icon {
+  @apply mb-3;
+}
+.card--title {
+  @apply font-primary;
+  @apply font-bold;
+  @apply text-xl;
+  @apply mb-3;
+}
+
+.skills__additional {
+  width: 90%;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.skills__additional--skill {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply mb-5;
+}
+
+.additional--skill--text {
+  @apply font-semibold;
+  @apply ml-5;
+}
+
+@screen md {
+  .skills__card {
+    width: 100%;
+  }
+}

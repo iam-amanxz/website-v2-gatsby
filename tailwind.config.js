@@ -9,8 +9,8 @@ module.exports = {
         secondary: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        bg: "#0F0F0F",
-        primary: "#F94024",
+        bg: "#000000",
+        primary: "#05B7FF",
         secondary: "#C0C514",
         body: "#CBCBCB",
       },

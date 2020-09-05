@@ -1,0 +1,59 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg;
+  @apply text-body;
+  @apply text-sm;
+  @apply font-normal;
+  @apply font-secondary;
+  @apply leading-7;
+}
+
+.container {
+  @apply max-w-contentMax;
+  @apply mx-auto;
+  height: 100%;
+  width: 90%;
+}
+
+.btn {
+  @apply font-primary;
+  @apply rounded-full;
+  @apply py-3;
+  @apply px-8;
+  @apply bg-primary;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.btn--primary {
+  box-shadow: 0 4px 6px -1px rgba(5, 183, 255, 0.35),
+    0 2px 4px -1px rgba(5, 183, 255, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn--primary:hover {
+  box-shadow: 0 4px 15px -1px rgba(249, 138, 36, 0.35),
+    0 2px 10px -1px rgba(249, 138, 36, 0.15);
+  @apply bg-transparent;
+}
+
+.section--title {
+  @apply font-primary;
+  @apply uppercase;
+  @apply text-2xl;
+  @apply font-bold;
+  @apply text-secondary;
+  @apply text-center;
+  @apply mb-10;
+  @apply tracking-widest;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+  @apply py-16;
+}
