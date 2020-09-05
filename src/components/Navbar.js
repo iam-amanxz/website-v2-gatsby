@@ -12,12 +12,11 @@ const Navbar = () => {
 
     switch (menuOpen) {
       case true:
-        // navList.style.display = "flex";
+        navList.style.display = "flex";
         navList.style.top = "70px";
         break;
       case false:
-        // navList.style.display = "none";
-        navList.style.top = "-50vh";
+        navList.style.top = "calc(-40vh - 70px)";
         break;
       default:
         break;
@@ -25,19 +24,11 @@ const Navbar = () => {
   }, [menuOpen]);
 
   const handleClick = e => {
-    const links = document.querySelectorAll(".nav__link");
-    const navList = document.querySelector(".nav__list");
-    // links.forEach(link => {
-    //   link.classList.remove("active")
-    // })
     const el = e.target;
-    // el.classList.add("active")
-    // navList.style.display = "none";
-    setMenuOpen(false);
     jump(el.getAttribute("href"), {
       duration: 1000,
     });
-    console.log(menuOpen);
+    setMenuOpen(false);
   };
 
   return (

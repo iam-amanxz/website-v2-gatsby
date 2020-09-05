@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "../css/Contact.css";
 
 import {
@@ -12,6 +16,10 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const data = useStaticQuery(graphql`
     query SocialLinksQuery {
       allSanityProfile {
@@ -34,14 +42,22 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="container text-center">
-        <h2 className="section--title">Get in touch</h2>
-        <p className="contact__description mb-10 max-w-4xl mx-auto">
+        <h2 data-aos="fade-up" className="section--title">
+          Get in touch
+        </h2>
+        <p
+          data-aos="fade-up"
+          className="contact__description mb-10 max-w-4xl mx-auto"
+        >
           I'm currently looking for new opportunities, and my inbox is always
           open. Whether you have a question or just want to say hi, shoot an
           email to <strong>iam.amanxz@gmail.com</strong>. I'll try my best to
           get back to you!
         </p>
-        <button className="btn btn--primary text-base md:text-lg leading-none mb-10">
+        <button
+          data-aos="fade-up"
+          className="btn btn--primary text-base md:text-lg leading-none mb-10"
+        >
           <a
             href="mailto:iam.amanxz@gmail.com"
             target="_blank"
@@ -50,10 +66,16 @@ const Contact = () => {
             Say Hello!
           </a>
         </button>
-        <h3 className="section__subtitle font-primary font-medium text-secondary text-2xl lg:text-3xl text-center mb-10">
+        <h3
+          data-aos="fade-up"
+          className="section__subtitle font-primary font-medium text-secondary text-2xl lg:text-3xl text-center mb-10"
+        >
           Find me on
         </h3>
-        <div className="social__links flex justify-center text-xl md:text-3xl ">
+        <div
+          data-aos="fade-up"
+          className="social__links flex justify-center text-xl md:text-3xl "
+        >
           {/** LinkedIn */}
           <div className="footer__link">
             <a href={links.linkedinUrl} target="_blank" rel="noreferrer">

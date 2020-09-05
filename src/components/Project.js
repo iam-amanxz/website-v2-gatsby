@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "gatsby-image";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { FaGithub, FaCloud } from "react-icons/fa";
 
 import "../css/Project.css";
 
 const Project = ({ project }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <article className="project">
+    <article data-aos="fade-up" className="project">
       {/** Picture */}
       <Image
         className="project__image"

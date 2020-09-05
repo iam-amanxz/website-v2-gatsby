@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import jump from "jump.js";
+import AOS from "aos";
+
 import { BiChevronDown } from "react-icons/bi";
 
+import "aos/dist/aos.css";
 import "../css/Header.css";
 
 import Navbar from "../components/Navbar";
 
 const Header = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const query = useStaticQuery(graphql`
     query profilequery {
       allSanityProfile {
@@ -34,6 +42,12 @@ const Header = () => {
 
   let resumeUrl = query.allSanityProfile.edges[0].node.resumeUrl;
 
+  const handleClick = () => {
+    jump("#about", {
+      duration: 1000,
+    });
+  };
+
   return (
     <header id="header" className="header font-primary">
       <Navbar />
@@ -45,21 +59,38 @@ const Header = () => {
           </div>
           {/* Hero Texts */}
           <div className="hero__content self-center">
-            <p className="text-xl md:text-2xl font-light mb-3">Hello, I am</p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-3 uppercase">
+            <p
+              data-aos="fade-down"
+              className="text-xl md:text-2xl font-light mb-3"
+            >
+              Hello, I am
+            </p>
+            <h1
+              data-aos="fade-down"
+              className="text-5xl md:text-6xl font-bold mb-3 uppercase"
+            >
               Husnul Aman
             </h1>
-            <p className="text-xl md:text-2xl font-light mb-10">
+            <p
+              data-aos="fade-down"
+              className="text-xl md:text-2xl font-light mb-10"
+            >
               And I chose to solve problems with programming
             </p>
-            <button className="btn btn--primary text-base md:text-lg">
+            <button
+              data-aos="fade-down"
+              className="btn btn--primary text-base md:text-lg"
+            >
               <a href={resumeUrl} target="_blank" rel="noreferrer">
                 Resume
               </a>
             </button>
           </div>
           {/* Chevron */}
-          <BiChevronDown className="hero__chevron text-3xl" />
+          <BiChevronDown
+            className="hero__chevron text-3xl cursor-pointer"
+            onClick={handleClick}
+          />
         </div>
       </section>
     </header>
