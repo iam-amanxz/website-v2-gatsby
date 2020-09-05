@@ -24,7 +24,6 @@ const About = () => {
             as a Software Engineer.
           </p>
           <br />
-          <br />
           <p data-aos="fade-up">
             Laying on the bed and learning new technologies and getting up to
             date with new trends and technologies is what I do most of the time.
@@ -34,14 +33,12 @@ const About = () => {
             of what I know is I learned from internet just like everyone else.
           </p>
           <br />
-          <br />
           <p data-aos="fade-up">
             I have so many human friends but nobody takes the place of ‘Quacky’
             which is a rubber duck that does nothing except stare at me the
             whole time while I code and swear at my computer in random Spanish
             words.
           </p>
-          <br />
           <br />
           <p data-aos="fade-up">
             I am not an alcoholic but If I ever show up to work red eyed that’s
@@ -51,7 +48,6 @@ const About = () => {
             for over 3 years now because that’s probably the only good game I
             can run on my potato PC.
           </p>
-          <br />
           <br />
           <p data-aos="fade-up">
             My family is so huge except nobody has any idea what I do with my
