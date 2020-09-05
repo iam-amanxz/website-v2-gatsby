@@ -1,18 +1,17 @@
-import React from "react"
-// import { Link } from "gatsby"
+import React from "react";
 
 // Components
-import Header from "../components/Header"
-import About from "../components/About"
-import Skills from "../components/Skills"
-import Projects from "../components/Projects"
-import Contact from "../components/Contact"
-import Footer from "../components/Footer"
+import Header from "../components/Header";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 // CSS
-import "../css/Index.css"
+import "../css/Index.css";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <div>
@@ -26,6 +25,6 @@ const IndexPage = () => (
       <Footer />
     </main>
   </div>
-)
+);
 
-export default IndexPage
+export default IndexPage;

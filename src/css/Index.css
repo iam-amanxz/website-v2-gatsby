@@ -1,5 +1,4 @@
-/* Fonts Import */
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600;700;800&family=Barlow:wght@700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -7,32 +6,75 @@ html {
 
 body {
   @apply bg-bg;
+  @apply text-body;
+  @apply text-sm;
   @apply font-normal;
   @apply font-secondary;
-  @apply text-primary;
-  @apply text-sm;
-}
-
-.section__title {
-  @apply text-3xl;
-  @apply font-bold;
-  @apply font-tertiary;
-}
-
-@screen md {
-  .section__title {
-    @apply text-4xl;
-  }
-}
-
-@screen lg {
-  .section__title {
-    /* @apply text-5xl; */
-  }
+  @apply leading-7;
 }
 
 .container {
   @apply max-w-contentMax;
   @apply mx-auto;
+  height: 100%;
   width: 90%;
+}
+
+.btn {
+  @apply font-primary;
+  @apply rounded-full;
+  @apply py-3;
+  @apply px-8;
+  @apply bg-primary;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.project__btn {
+  @apply bg-transparent;
+}
+
+.btn--primary,
+.project__icon__wrapper {
+  box-shadow: 0 4px 6px -1px rgba(5, 183, 255, 0.35),
+    0 2px 4px -1px rgba(5, 183, 255, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn--primary:hover,
+.project__btn:hover,
+.project__icon__wrapper:hover {
+  box-shadow: 0 4px 15px -1px rgba(249, 138, 36, 0.35),
+    0 2px 10px -1px rgba(249, 138, 36, 0.15);
+  @apply bg-transparent;
+}
+
+.section--title {
+  @apply font-primary;
+  @apply uppercase;
+  @apply text-2xl;
+  @apply font-bold;
+  @apply text-secondary;
+  @apply text-center;
+  @apply mb-10;
+  @apply tracking-widest;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+  @apply py-16;
+}
+
+@screen md {
+  .section--title {
+    @apply text-3xl;
+  }
+}
+
+@screen lg {
+  .section--title {
+    @apply text-4xl;
+  }
 }

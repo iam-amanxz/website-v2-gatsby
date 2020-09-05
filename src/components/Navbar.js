@@ -1,101 +1,93 @@
-import React, { useState, useEffect } from "react"
-import jump from "jump.js"
+import React, { useState, useEffect } from "react";
+import jump from "jump.js";
 
-import { FaBars } from "react-icons/fa"
-import { RiCloseLine } from "react-icons/ri"
+import { FaBars } from "react-icons/fa";
+import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const navList = document.querySelector(".nav__list")
+    const navList = document.querySelector(".nav__list");
 
     switch (menuOpen) {
       case true:
-        navList.style.display = "flex"
-        break
+        navList.style.top = "70px";
+        break;
       case false:
-        navList.style.display = "none"
-        break
+        navList.style.top = "calc(-40vh - 70px)";
+        break;
       default:
-        break
+        break;
     }
-  }, [menuOpen])
+  }, [menuOpen]);
 
-  // Add Active Class
-  const handleClick = e => {
-    const links = document.querySelectorAll(".nav__link")
-    const navList = document.querySelector(".nav__list")
-    links.forEach(link => {
-      link.classList.remove("active")
-    })
-    const el = e.target
-    el.classList.add("active")
-    navList.style.display = "none"
-    setMenuOpen(false)
-    jump(el.getAttribute("href"), {
+  const goHome = () => {
+    jump("#header", {
       duration: 1000,
-    })
-  }
+    });
+  };
+  const handleClick = e => {
+    const el = e.target;
+    jump(`#${el.getAttribute("value")}`, {
+      duration: 1000,
+    });
+
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="nav">
-      {/** Nav Logo */}
-      <div className="nav__container">
-        <p className="nav__logo text-xl">
-          <a href="#hero">
-            husnul<span className="font-bold">aman.</span>
-          </a>
-        </p>
-        {/** Nav Toggle */}
+      <div className="container flex justify-between items-center">
+        <div className="nav__brand text-lg md:text-xl">
+          <h2 className="font-light" onClick={goHome}>
+            husnul<span className="font-semibold">aman</span>
+          </h2>
+        </div>
         {menuOpen === true ? (
           <RiCloseLine
-            className="nav__toggle text-bg toggle--close md:hidden text-4xl"
+            className="nav__toggle toggle--close text-4xl"
             onClick={() => setMenuOpen(false)}
           />
         ) : (
           <FaBars
-            className="nav__toggle toggle--bar md:hidden text-2xl"
+            className="nav__toggle toggle--bar text-2xl"
             onClick={() => setMenuOpen(true)}
           />
         )}
-
-        {/** Nav List */}
-
-        <ul className="nav__list">
-          <li className="nav__list--item" onClick={handleClick}>
-            <a href="#hero" className="nav__link">
-              Home
-            </a>
-          </li>
-
-          <li className="nav__list--item md:ml-10" onClick={handleClick}>
-            <a href="#about" className="nav__link">
-              About
-            </a>
-          </li>
-
-          <li className="nav__list--item  md:ml-10" onClick={handleClick}>
-            <a href="#skills" className="nav__link">
-              Skills
-            </a>
-          </li>
-
-          <li className="nav__list--item  md:ml-10" onClick={handleClick}>
-            <a href="#projects" className="nav__link">
-              Projects
-            </a>
-          </li>
-
-          <li className="nav__list--item  md:ml-10" onClick={handleClick}>
-            <a href="#contact" className="nav__link">
-              Contact
-            </a>
-          </li>
-        </ul>
       </div>
-    </nav>
-  )
-}
+      <ul className="nav__list text-lg font-bold">
+        <li className="nav__list--item">
+          <a value="header" className="nav__link" onClick={handleClick}>
+            Home
+          </a>
+        </li>
+        <li className="nav__list--item">
+          <a value="about" className="nav__link" onClick={handleClick}>
+            About
+          </a>
+        </li>
 
-export default Navbar
+        <li className="nav__list--item">
+          <a value="skills" className="nav__link" onClick={handleClick}>
+            Skills
+          </a>
+        </li>
+
+        <li className="nav__list--item">
+          <a value="projects" className="nav__link" onClick={handleClick}>
+            Projects
+          </a>
+        </li>
+
+        <li className="nav__list--item">
+          <a value="contact" className="nav__link" onClick={handleClick}>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
