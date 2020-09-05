@@ -35,7 +35,7 @@ const Header = () => {
   let resumeUrl = query.allSanityProfile.edges[0].node.resumeUrl;
 
   return (
-    <header id="#" className="header font-primary">
+    <header id="header" className="header font-primary">
       <Navbar />
       <section id="hero" className="hero h-screen">
         <div className="container md:grid gap-12 grid-cols-2">
