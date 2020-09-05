@@ -1,3 +1,17 @@
+.nav {
+  height: 70px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  @apply bg-black;
+}
+
+.nav__brand,
+.nav__toggle {
+  cursor: pointer;
+}
+
 .hero {
   position: relative;
   @apply leading-none;
@@ -38,9 +52,17 @@
   bottom: 0.1em;
   left: 50%;
   transform: translateX(-50%);
+  animation: bounce 0.5s ease-in 5s infinite;
 }
 
-/* .hero__chevron:hover {
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
-} */
+@keyframes bounce {
+  0% {
+    bottom: 0.1em;
+  }
+  50% {
+    bottom: 0.2em;
+  }
+  100% {
+    bottom: 0.1em;
+  }
+}
