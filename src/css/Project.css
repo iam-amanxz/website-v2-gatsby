@@ -1,0 +1,73 @@
+.project {
+  max-width: 900px;
+  margin: 0 auto;
+
+  @apply mb-16;
+}
+
+.project__image {
+  width: 80%;
+  margin: 0 auto;
+  @apply shadow-xl;
+}
+
+.project__card {
+  @apply -mt-10;
+  @apply pt-16;
+  background-color: rgb(15, 15, 15);
+}
+
+@screen md {
+  .project {
+    display: flex;
+    justify-content: center;
+  }
+  .project__image {
+    width: 100%;
+    width: 35%;
+    margin: 0;
+    justify-self: right;
+    align-self: center;
+    margin-right: -20px;
+  }
+
+  .project__card {
+    @apply mt-0;
+    @apply pt-10;
+    width: 65%;
+    margin-left: -20px;
+  }
+}
+
+.project__btn {
+  @apply py-3;
+  @apply px-8;
+  transition: all 0.2s ease-in;
+}
+
+.project__btn:hover {
+  @apply shadow-xl;
+}
+
+.project__icon__wrapper {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.project__icon__wrapper:hover {
+  transform: rotate(10deg);
+  @apply shadow-2xl;
+}
+
+.project__btn:hover .project__arrow {
+  animation: jump 0.5s ease-out 2 forwards;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateX(0.3em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}

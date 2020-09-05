@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../css/Footer.css";
-
 const Footer = () => {
   return (
     <footer className="footer text-center font-primary py-3">

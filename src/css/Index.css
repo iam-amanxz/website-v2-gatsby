@@ -30,13 +30,20 @@ body {
   @apply font-semibold;
 }
 
-.btn--primary {
+.project__btn {
+  @apply bg-transparent;
+}
+
+.btn--primary,
+.project__icon__wrapper {
   box-shadow: 0 4px 6px -1px rgba(5, 183, 255, 0.35),
     0 2px 4px -1px rgba(5, 183, 255, 0.15);
   transition: all 0.2s ease-in-out;
 }
 
-.btn--primary:hover {
+.btn--primary:hover,
+.project__btn:hover,
+.project__icon__wrapper:hover {
   box-shadow: 0 4px 15px -1px rgba(249, 138, 36, 0.35),
     0 2px 10px -1px rgba(249, 138, 36, 0.15);
   @apply bg-transparent;
